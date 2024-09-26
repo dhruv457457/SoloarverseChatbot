@@ -1,0 +1,304 @@
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    margin: 0; /* Remove any margin around the body */
+    padding: 0; /* Remove any padding around the body */
+    background-image: 
+        url("https://images.unsplash.com/photo-1580129116358-e7bf29615ac9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"), 
+        url("https://i.pinimg.com/564x/61/da/7d/61da7d686092b3887766df67ffa39899.jpg");
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, contain;
+    background-blend-mode: multiply; /* Blend the images */
+    color: #fff;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(31, 31, 31, 0.9);
+    padding: 10px 20px; /* Padding for spacing inside navbar */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #444;
+    margin: 0; /* Remove any margin */
+}
+
+/* Additional styles */
+.nav-logo a {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0; /* Ensure no margin on the nav links */
+    padding: 0; /* Ensure no padding on the nav links */
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Main Header Styling */
+.mainhead h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 5px; /* Reduced margin from 10px to 5px */
+}
+
+.mainhead p {
+    text-align: center;
+    color: #ccc;
+    font-style: italic;
+    margin-bottom: 15px; /* Adjust this value to reduce space further */
+}
+
+/* Chat Container Styling */
+.chat-container {
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #333;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+/* Chat Box Styling */
+.chat-box {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #555;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+/* User Message Styling */
+.user-message {
+    text-align: right;
+    color: #007bff;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 8px;
+    max-width: 75%;
+    margin-left: auto;
+}
+
+/* Bot Message Styling */
+.bot-message {
+    text-align: left;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    max-width: 75%;
+    margin-right: auto;
+}
+
+/* Input Section Styling */
+.userinput {
+    display: flex;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+}
+
+button {
+    width: 20%;
+    background-color: #ff9100;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6f00;
+}
+
+/* Planet Animation */
+@keyframes movePlanet {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, 20px); /* Adjust to desired movement */
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Planets and Sun Styling */
+.planet {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    z-index: 1;
+    animation: movePlanet 8s ease-in-out infinite; /* Apply animation */
+}
+
+/* Individual Planet Positions and Images */
+#planet1 {
+    width: 150px;
+    height: 150px;
+    top: 10px;
+    left: 10px;
+    background-image: url('https://space-facts.com/wp-content/uploads/mars.png'); /* Mars */
+}
+
+#planet2 {
+    width: 120px;
+    height: 120px;
+    bottom: 50px;
+    left: 70px;
+    background-image: url('https://space-facts.com/wp-content/uploads/venus.png'); /* Venus */
+}
+
+#planet3 {
+    width: 180px;
+    height: 180px;
+    bottom: 20px;
+    right: 50px;
+    background-image: url('https://space-facts.com/wp-content/uploads/jupiter.png'); /* Jupiter */
+}
+
+#planet4 {
+    width: 100px;
+    height: 100px;
+    top: 80px;
+    right: 20px;
+    background-image: url('https://space-facts.com/wp-content/uploads/earth.png'); /* Earth */
+}
+
+#planet5 {
+    width: 90px;
+    height: 90px;
+    top: 200px;
+    left: 80px;
+    background-image: url('https://space-facts.com/wp-content/uploads/mercury.png'); /* Mercury */
+}
+
+#planet6 {
+    width: 220px;
+    height: 220px;
+    bottom: 100px;
+    left: 200px;
+    background-image: url('https://space-facts.com/wp-content/uploads/saturn.png'); /* Saturn */
+}
+
+#planet7 {
+    width: 130px;
+    height: 130px;
+    top: 50px;
+    left: 300px;
+    background-image: url('https://space-facts.com/wp-content/uploads/uranus.png'); /* Uranus */
+}
+
+#planet8 {
+    width: 140px;
+    height: 140px;
+    top: 150px;
+    right: 100px;
+    background-image: url('https://space-facts.com/wp-content/uploads/neptune.png'); /* Neptune */
+}
+
+#planet9 {
+    width: 100px;
+    height: 100px;
+    bottom: 200px;
+    right: 200px;
+    background-image: url('https://space-facts.com/wp-content/uploads/moon.png'); /* Moon */
+}
+
+/* Additional Planets */
+#planet10 {
+    width: 130px;
+    height: 130px;
+    top: 150px;
+    left: 150px;
+    background-image: url('https://space-facts.com/wp-content/uploads/mars-v2.jpg'); /* Placeholder for another planet */
+}
+
+#planet11 {
+    width: 180px;
+    height: 180px;
+    top: 250px;
+    right: 80px;
+    background-image: url('https://space-facts.com/wp-content/uploads/uranus-v2.jpg'); /* Placeholder for another planet */
+}
+
+#planet12 {
+    width: 140px;
+    height: 140px;
+    bottom: 300px;
+    left: 50px;
+    background-image: url('https://space-facts.com/wp-content/uploads/planet-x.png'); /* Placeholder for another planet */
+}
+
+#sun {
+    width: 250px;
+    height: 250px;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('https://static.vecteezy.com/system/resources/previews/021/657/606/non_2x/yellow-sun-light-up-free-png.png'); /* Sun */
+    z-index: 0;
+}
+
+/* Responsive Navbar for Small Screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
